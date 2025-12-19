@@ -1,13 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
-import { navigation } from "@/data/navigation";
 import { services } from "@/data/services";
 import { techLogos } from "@/data/tech-logos";
 import LogoLoop from "@/components/LogoLoop";
 import Threads from "@/components/Threads";
 import ContactForm from "@/components/ContactForm";
+import HeaderNav from "@/components/HeaderNav";
 import PortfolioShowcase, { PortfolioSection } from "@/components/PortfolioShowcase";
 import SupportCarousel, { SupportDoc } from "@/components/SupportCarousel";
+import headerStyles from "@/components/header.module.css";
 import styles from "./page.module.css";
 
 const platformSlides: PortfolioSection[] = [
@@ -119,30 +120,25 @@ export default function Home() {
     <div className={styles.page} id="top">
       <div className={styles.gridOverlay} aria-hidden />
       <div className={styles.glow} aria-hidden />
-      <header className={styles.header}>
-        <div className={styles.logoBlock}>
+      <header className={headerStyles.header}>
+        <div className={headerStyles.logoBlock}>
           <Image
-            className={styles.logoImage}
+            className={headerStyles.logoImage}
             src="/logo.png"
             alt="Логотип СКАЛАГЕН-НейроТех"
             width={220}
             height={64}
             priority
           />
-          <span className={styles.logoSub}>Центр цифровых трансформаций</span>
+          <span className={headerStyles.logoSub}>Центр цифровых трансформаций</span>
         </div>
 
-        <nav className={styles.nav} aria-label="Основная навигация">
-          {navigation.map((item) => (
-            <Link key={item.href} href={item.href} className={styles.navLink}>
-              {item.label}
-            </Link>
-          ))}
-        </nav>
-
-        <Link className={styles.headerCta} href="#contacts">
-          Оставить заявку
-        </Link>
+        <div className={headerStyles.headerActions}>
+          <HeaderNav />
+          <Link className={headerStyles.headerCta} href="#contacts">
+            Оставить заявку
+          </Link>
+        </div>
       </header>
 
       <main className={styles.main}>
@@ -238,7 +234,7 @@ export default function Home() {
             </p>
           </div>
           <PortfolioShowcase sections={platformSlides} />
-          <section id="support" className={styles.section}>
+        <section id="support" className={`${styles.section} ${styles.supportSection}`}>
           <div className={styles.sectionHeader}>
             <p className={styles.sectionKicker}>Кто нас поддерживает</p>
             <h2>Регионы и партнёры платформы</h2>
