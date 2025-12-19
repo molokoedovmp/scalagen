@@ -492,6 +492,55 @@
   color: var(--text-secondary);
 }
 
+.legalCard {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 14px 34px -24px rgba(8, 20, 53, 0.45);
+  display: grid;
+  gap: 14px;
+}
+
+.legalList {
+  list-style: none;
+  display: grid;
+  gap: 12px;
+  padding: 0;
+  margin: 0;
+}
+
+.legalList li {
+  display: grid;
+  gap: 10px;
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: #f9fbff;
+}
+
+.legalList h3 {
+  font-size: 18px;
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.legalList p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.legalBullets {
+  display: grid;
+  gap: 6px;
+  padding-left: 18px;
+  color: var(--text-secondary);
+}
+
+.legalBullets li {
+  list-style: disc;
+}
+
 .cardsGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));

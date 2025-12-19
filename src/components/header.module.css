@@ -26,12 +26,18 @@
 .logoImage {
   height: 72px;
   width: auto;
+  display: block;
+  transform: scale(1.12);
+  transform-origin: left center;
 }
 
 .logoSub {
   font-size: 12px;
   color: var(--text-secondary);
   letter-spacing: 0.02em;
+  display: inline-block;
+  transform: scale(1.08);
+  transform-origin: left center;
 }
 
 .headerActions {

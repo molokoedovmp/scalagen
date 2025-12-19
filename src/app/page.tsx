@@ -130,7 +130,7 @@ export default function Home() {
             height={64}
             priority
           />
-          <span className={headerStyles.logoSub}>Центр цифровых трансформаций</span>
+          <span className={headerStyles.logoSub}>СКАЛАГЕН-НейроТех</span>
         </div>
 
         <div className={headerStyles.headerActions}>
@@ -234,6 +234,8 @@ export default function Home() {
             </p>
           </div>
           <PortfolioShowcase sections={platformSlides} />
+        </section>
+
         <section id="support" className={`${styles.section} ${styles.supportSection}`}>
           <div className={styles.sectionHeader}>
             <p className={styles.sectionKicker}>Кто нас поддерживает</p>
@@ -246,8 +248,7 @@ export default function Home() {
           <SupportCarousel docs={supportDocs} />
         </section>
 
-        </section>
-<section id="about" className={styles.section}>
+        <section id="about" className={styles.section}>
           <div className={styles.sectionHeader}>
             <p className={styles.sectionKicker}>О компании</p>
             <h2>СКАЛАГЕН-НейроТех</h2>
@@ -313,16 +314,16 @@ export default function Home() {
                 <span className={styles.contactLabel}>Сайт</span>
                 <Link href="https://scalagen.ru">scalagen.ru</Link>
               </div>
-            <div className={styles.contactNote}>
-              Подготовим экспертную сессию и предложим прозрачную смету.
+              <div className={styles.contactNote}>
+                Подготовим экспертную сессию и предложим прозрачную смету.
+              </div>
+            </div>
+
+            <div className={styles.formCard}>
+              <ContactForm />
             </div>
           </div>
-
-          <div className={styles.formCard}>
-            <ContactForm />
-          </div>
-        </div>
-      </section>
+        </section>
       </main>
 
       <footer className={styles.footer}>
@@ -352,6 +353,7 @@ export default function Home() {
             <p className={styles.footerTitle}>Документы</p>
             <Link href="/privacy">Политика конфиденциальности</Link>
             <Link href="/requisites">Реквизиты</Link>
+            <Link href="/it-info">Сведения об IT-деятельности</Link>
           </div>
         </div>
 
