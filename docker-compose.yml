@@ -1,0 +1,16 @@
+version: "3.9"
+
+services:
+  web:
+    build: .
+    container_name: scalagen-web
+    restart: unless-stopped
+    env_file:
+      - .env.production
+    environment:
+      - PORT=3000
+      - NEXT_TELEMETRY_DISABLED=1
+    ports:
+      - "3002:3000"
+    volumes:
+      - .env.production:/app/.env:ro
