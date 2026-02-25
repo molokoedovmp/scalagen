@@ -113,6 +113,7 @@ const supportDocs: SupportDoc[] = [
   { title: "Пятигорск", href: "/support/Поддержка Пятигорск.jpeg", type: "image" },
   { title: "Красноярск", href: "/support/Поддержка КРОО Красноярск.png", type: "image" },
   { title: "Бурятия", href: "/support/Поддержка Бурятия.png", type: "image" },
+  { title: "Донецкая область", href: "/support/Поддержка Горловка ДДТ.pdf", type: "pdf" },
 ];
 
 export default function Home() {
